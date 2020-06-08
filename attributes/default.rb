@@ -89,14 +89,8 @@ default['hops']['container_cleanup_delay_sec'] = 0
 default['hops']['yarn']['scripts']             = %w{ start stop restart }
 default['hops']['yarn']['ps_port']             = 20888
 
-case node['platform_family']
-when "debian"
 default['hops']['yarn']['vpmem_ratio']         = "50.1"
-default['hops']['yarn']['vmem_check']          = true
-when "rhel"
-default['hops']['yarn']['vpmem_ratio']         = "50.1"
-default['hops']['yarn']['vmem_check']          = false
-end
+default['hops']['yarn']['vmem_check']          = "true"
 default['hops']['yarn']['pmem_check']          = "true"
 
 default['hops']['yarn']['detect-hardware-capabilities'] = "true"

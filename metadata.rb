@@ -340,6 +340,10 @@ attribute "hops/yarn/pmem_check",
           :description => "Whether physical memory limits will be enforced for containers.",
           :type => 'string'
 
+attribute "hops/yarn/vmem_check",
+          :description => "Whether physical memory limits will be enforced for containers.",
+          :type => 'string'
+
 attribute "hops/yarn/vcores",
           :description => "Hops NodeManager Number of Virtual Cores",
           :type => 'string'
