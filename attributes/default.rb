@@ -254,7 +254,7 @@ default['hops']['nm']['https']['port']      = "45443"
 
 default['hops']['yarn']['resource_tracker'] = "false"
 default['hops']['nn']['direct_memory_size'] = 1000
-default['hops']['nn']['heap_size']          = 1000
+default['hops']['nn']['heap_size']          = 4000
 
 default['hops']['nn']['public_ips']         = ['10.0.2.15']
 default['hops']['nn']['private_ips']        = ['10.0.2.15']
@@ -307,8 +307,8 @@ default['hops']['yarn']['quota_checkpoint_nbticks']          = 600
 default['hops']['yarn']['quota_threshold_gpu']               = 0.2
 default['hops']['yarn']['quota_minimum_charged_mb']          = 1024
 default['hops']['yarn']['quota_variable_price_enabled']      = "true"
-default['hops']['yarn']['nm_heapsize_mbs']                   = 1000
-default['hops']['yarn']['rm_heapsize_mbs']                   = 1000
+default['hops']['yarn']['nm_heapsize_mbs']                   = 4000
+default['hops']['yarn']['rm_heapsize_mbs']                   = 4000
 
 ## SSL Config Attributes##
 

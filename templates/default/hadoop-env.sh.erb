@@ -35,6 +35,9 @@ export JAVA_HOME=${JAVA_HOME}
 
 export HADOOP_CONF_DIR=${HADOOP_CONF_DIR:-"/etc/hadoop"}
 
+export AWS_ACCESS_KEY_ID=<%= node['hops']['aws_access_key_id'] %>
+export AWS_SECRET_ACCESS_KEY=<%= node['hops']['aws_secret_access_key'] %>
+
 # Extra Java CLASSPATH elements.  Automatically insert capacity-scheduler.
 for f in $HADOOP_HOME/contrib/capacity-scheduler/*.jar; do
   if [ "$HADOOP_CLASSPATH" ] ; then

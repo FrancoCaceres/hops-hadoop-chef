@@ -36,17 +36,27 @@ http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterS
   </property>
 
   <property>
+    <name>yarn.app.mapreduce.am.env</name>
+    <value><%= node['hops']['aws_access_key_id'] %>,<%= node['hops']['aws_secret_access_key'] %></value>
+  </property>
+
+  <property>
     <name>mapreduce.map.java.opts</name>
-    <value>-Xmx512M</value>
+    <value>-Xmx8000M</value>
+  </property>
+  
+  <property>
+    <name>yarn.app.mapreduce.am.resource.mb</name>
+    <value>8000</value>
   </property>
 
   <property>
     <name>mapreduce.map.memory.mb</name>
-    <value>512</value>
+    <value>8000</value>
   </property>
   <property>
     <name>mapreduce.reduce.memory.mb</name>
-    <value>512</value>
+    <value>8000</value>
   </property>
 
   <property>
@@ -56,7 +66,7 @@ http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/ClusterS
 
   <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>-Xmx256M</value>
+    <value>-Xmx8000M</value>
   </property>
 
   <property>

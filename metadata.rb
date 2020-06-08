@@ -484,6 +484,14 @@ attribute "hops/enable_cloud_storage",
           :description => "Enable cloud storage on the DataNodes.",
           :type => 'string'
 
+attribute "hops/aws_access_key_id",
+          :description => "AWS access key ID",
+          :type => 'string'
+
+attribute "hops/aws_secret_access_key",
+          :description => "AWS secret access key",
+          :type => 'string'
+
 attribute "hops/cloud_provider",
           :description => "Name of the cloud provider. Default: AWS",
           :type => 'string'

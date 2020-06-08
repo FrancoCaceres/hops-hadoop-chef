@@ -19,6 +19,9 @@ export HADOOP_YARN_USER=${HADOOP_YARN_USER:-yarn}
 # resolve links - $0 may be a softlink
 export YARN_CONF_DIR="${YARN_CONF_DIR:-$HADOOP_YARN_HOME/conf}"
 
+export AWS_ACCESS_KEY_ID=<%= node['hops']['aws_access_key_id'] %>
+export AWS_SECRET_ACCESS_KEY=<%= node['hops']['aws_secret_access_key'] %>
+
 # some Java parameters
 # export JAVA_HOME=/home/y/libexec/jdk1.6.0/
 if [ "$JAVA_HOME" != "" ]; then
@@ -32,7 +35,7 @@ if [ "$JAVA_HOME" = "" ]; then
 fi
 
 JAVA=$JAVA_HOME/bin/java
-JAVA_HEAP_MAX=-Xmx1000m 
+JAVA_HEAP_MAX=-Xmx4000m
 
 # For setting YARN specific HEAP sizes please use this
 # Parameter and set appropriately
